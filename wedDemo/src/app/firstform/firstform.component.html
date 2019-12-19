@@ -1,0 +1,14 @@
+<p>
+Questionnaire
+</p>
+<form #theform=ngForm (ngSubmit)="onSubmit(theform)" >
+  <input type ="text" ngModel name ="name" >
+<select  type="text"  ngModel color ="color" id="selectColor">
+
+  <option value ="red">Red</option>
+  <option value ="blue">Blue</option>
+  <option value ="green">Green</option>
+  <option value ="gray">Gray></option>
+</select>
+<input id ="submit" type ="submit" value ="Submit">
+</form>

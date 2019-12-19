@@ -1,0 +1,17 @@
+FullName: <br/>
+<input type="text" required [(ngModel)]= "fullName" #theElement /> <br/>
+Class name: {{theElement.classname}}<br/>
+Magazine edition: <br/>
+<select [(ngModel)] ="selectEdition">
+<option *ngFor ="let e of editions" 
+[ngValue]="e">{{e.editionName}}</option>
+
+</select><br/>
+
+shipping option: 
+<input type ="radio" name="selectedShipping" [(ngModel)]="selectedShipping" value="GROUND" /> GROUND
+<input type ="radio" name="selectedShipping" [(ngModel)]="selectedShipping" value="Air" /> Air
+
+<label> <input type="checkbox" [(ngModel)]="acceptPolicy"/> i Accept </label><br/>
+<br/> Price: {{selectedEdition.price}}
+<button (click)="submitForm()" >Purchage</button>
